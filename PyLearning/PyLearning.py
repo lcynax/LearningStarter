@@ -315,10 +315,115 @@ print(food[1][2])   # Vai buscar soop
 ##
 ###  *************** 14 ************************       Tuple     Collection which is ordered and unchabgeable   ######1.32.50
 #
+"""
+applier = ("Bro" , 21, "male")
 
-##testetesteteste teste outra vez
+print(applier.count("Bro"))       #Return number of Bro´s
+print(applier.index("male"))      #Return Position / Index (ter em conta que começa em 0 sempre)
 
-desentorta desentorta
+for x in applier:                 #Return all the data inside the Tuple
+    print(x)
+
+if "Bro" in applier:              #Confirm if "Bro" is in Tuple 
+    print("Bro inside")
+"""
+
+##
+###  *************** 15 ************************       SET    acts like a List but has no order or index, which means when print they dont always come the same position
+#                                                             U can see whats different between 2 Set´s and put together without a specific order
+
+"""
+clothesup = {"belt", "gloves", "t-shirt","jacket"}
+clothesdown = {"belt","pants","boots", "socks"}
+
+#clothesup.add("something")
+#clothesdown.remove("boots") 
+#clothesup.clear()
+#clothesup.update(clothesdown)                                  #Add one Set to another, adds all of clothes down to clothes up
+#clothesall = clothesup.union(clothesdown)                      #Create one Set interally different with both other Sets
+
+print(clothesup.difference(clothesdown))                       # what clothesup has that clothesdown does not
+print(clothesup.intersection(clothesdown))                     # Comun stuff in both sets
+#for x in clothesall:
+#    print(x)
+"""
+
+
+##
+###  *************** 16 ************************       Dictionary´s             Changable, unordered collection of unique key: value pairs
+#                                                                               Fast because they use hashing, allow us to accsess a value Quickly
+
+"""
+
+capitals = {"Italy":"Rome",
+            "India":"New Dehli",
+            "Spain":"Madrid",
+            "Russia":"Moscow"}
+
+#print(capitals["Russia"])                            # Print the value of the key "Russia
+#print(capitals["Germany"])                           #Dont use this because gives an error
+#print(capitals.get("Germany"))                       # Returns None if Capitals does not countain Germany
+#print(capitals.keys())                               # Print of the keys
+#print(capitals.values())                             # Print of the values
+#print(capitals.items())                              # Prints everything on the Dictionary
+
+capitals.update({"Germany":"Berlin"})                 #Adds Germany to the Dictionary with is respective value
+capitals.update({"Italy":"Milano"})                   #Changes Italy capital+
+capitals.pop("Germany")
+capitals.clear()
+
+for key,value in capitals.items():                    # Prints everything
+    print(key,value) 
+
+"""
+
+
+##
+### ********************************* 17    Indexing
+##
+
+"""
+
+name = "leandro Cardoso!"
+
+if(name[0].islower()):                     # Capitalize the letter with index 0
+    name = name.capitalize()
+
+first_name = name[:6].upper()
+last_name = name [8:].lower()
+print(first_name)
+print(last_name)
+
+last_character = name [-1]          # last thing in string
+"""
+
+
+##
+### ********************************* 18   Fucntion = a block of code which is executed ONLY when called
+##
+
+def hi():
+    print("hello!")
+    print("teste")
+
+hi()                    #calling a function           Needed to have the same amount of arguments called
+
+def hello(name):
+    print("hello "+name)
+    print("works")
+
+name = input("Write your name here: ")
+hello(name)
+
+def complete(first, second,age):
+    print("Hello: "+first+" "+second+" You are "+str(age)+" years old")
+
+complete("21","22",23)
+    
+
+##
+### ********************************* 19    Return Statement
+##
 
 
 
@@ -326,13 +431,42 @@ desentorta desentorta
 
 
 ##
-###  *************** 15 ************************       
-#
+### ********************************* 20    
+##
+
+
 
 ##
-###  *************** 16 ************************       
-#
+### ********************************* 21    
+##
+
+
 
 ##
-###  *************** 17 ************************       
-#
+### ********************************* 22    
+##
+
+
+
+##
+### ********************************* 23    
+##
+
+
+
+##
+### ********************************* 24    
+##
+
+
+
+##
+### ********************************* 25    
+##
+
+
+
+##
+### ********************************* 26    
+##
+
