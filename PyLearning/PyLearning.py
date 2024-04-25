@@ -237,17 +237,16 @@ for seconds in range (10,0,-1):                    #Contagem decrescente
 #
 
 """
-
 rows = int(input("How many rows: "))
 columns = int(input("How many columns: "))
 symbol = input("Enter a symbol to use: ")
 
 for i in range(rows):                 # For each Row, write X symbols according to number of columns ou seja, a fazer a primeira row, vai fazer todas as colunas... 
     for j in range(columns):
-        print(symbol, end="")
+        print(symbol, end="")   
     print()
-
 """
+
 
 ##
 ###  *************** 12 ************************       Loop Control Statements  Break, continue, pass
@@ -313,7 +312,7 @@ print(food[1][2])   # Vai buscar soop
 """
 
 ##
-###  *************** 14 ************************       Tuple     Collection which is ordered and unchabgeable   ######1.32.50
+###  *************** 14 ************************       Tuple     Collection which is ordered and unchangeable   ######1.32.50
 #
 """
 applier = ("Bro" , 21, "male")
@@ -402,6 +401,7 @@ last_character = name [-1]          # last thing in string
 ### ********************************* 18   Fucntion = a block of code which is executed ONLY when called
 ##
 
+"""
 def hi():
     print("hello!")
     print("teste")
@@ -419,46 +419,141 @@ def complete(first, second,age):
     print("Hello: "+first+" "+second+" You are "+str(age)+" years old")
 
 complete("21","22",23)
-    
+  """  
 
 ##
-### ********************************* 19    Return Statement
-##
+### ********************************* 19    Return Statement   Function send Python values/objects back to the calller
+##                                                             These values/objects are known as the function´s return value.
+"""
+def multiply(number1,number2):
+    return number1 * number2
 
-
-
-
-
-
-##
-### ********************************* 20    
-##
-
-
+x = multiply(6,8)
+print(x)
+"""
 
 ##
-### ********************************* 21    
+### ********************************* 20   Keyword Arguments
 ##
 
+"""
+def Hi(first,middle,last):
+    print("Hello " +first +" "+middle +" " +last)
 
-
-##
-### ********************************* 22    
-##
+Hi(last="Car", middle="mar", first="leandro")
+"""
 
 
 
 ##
-### ********************************* 23    
+### ********************************* 21       Nested Function calls   ===== functions calls inside other functions and soo on
+###                                                                          1 usable function is the one inside all the ( )
+##
+"""
+print(round(abs(float(input("Enter a positive number: ")))))
+
+## Replaces the use of 4 or 5 lines of code to do every step of the convertion, num=input....+ num = float(num) ..+ num = abs(num) ... + num = round(num) + print(num)
+"""
+
+##
+### ********************************* 22       Variable scope       its a variable that only exists inside the region that was created
+##
+
+"""
+def display_name():
+    name = "leandro"              #scope variable
+    print(name)
+
+#print(name)  does not work because name is not a global variable
+"""
+
+##
+### ********************************* 23        *Args   (can be any name, just needs *)               Packs all Arguments into a tuple  , useful so that a function can accept a varying amount of arguments
+##
+
+"""
+def add(*stuff):
+    sum = 0
+    stuff = list(stuff)        # needed to convert to a list to change an outside value once the function is called, Tuples content cannot be changed
+    stuff[0] = 0 
+    for i in stuff:
+        sum+= i
+    return sum
+
+print(add(1,2,3,4,5,6))
+"""
+
+##
+### ********************************* 24      **kwargs  ===== packs all arguments into a dictionary
+###                                                           useful so that a  funtion can accept a varying amount of keyword arguments(kwargs)
+##
+
+"""
+def hello(**names):
+    #print("Hello " + names["first"] + " " + kwargs["last])
+    print("Hello",end=" ")                                                       # Will write in the same line
+    for key,value in names.items():                                              # for each key / value in "hello", writes it
+        print(value,end=" ")
+
+hello(title = "Mr." ,first = "Leandro" ,middle = "Something" ,last = "Cardoso")
+"""
+
+
+
+
+##
+### ********************************* 25     str.format()    = optional method that gives users                    Purelly optional format fields
+##                                                           more control when displaying output
+
+"""
+animal = "dog"
+item = "fence"
+
+#print("The " +animal +" jumped over the " +item)
+print("The {} jumped over the {}".format(animal,item))
+"""
+
+
+
+##
+### ********************************* 26    
+##
+
+
+
+
+
+
+
+##
+### ********************************* 25    
 ##
 
 
 
 ##
-### ********************************* 24    
+### ********************************* 26    
+##
+
+##
+### ********************************* 25    
 ##
 
 
+
+##
+### ********************************* 26    
+##
+
+##
+### ********************************* 25    
+##
+
+
+
+##
+### ********************************* 26    
+##
 
 ##
 ### ********************************* 25    
