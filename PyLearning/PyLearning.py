@@ -69,9 +69,11 @@ Monitor, idade, casaT3 = "AOC", 23, True
 
 Eu = Ela = Ele = Eles = 30
 """
+
 ##
 ###  *************** Exe 3 ************************
 ##
+
 """
 print (len(name))         #Quantidade de caracteres
 
@@ -511,48 +513,78 @@ item = "fence"
 
 #print("The " +animal +" jumped over the " +item)
 print("The {} jumped over the {}".format(animal,item))
+print("The {1} jumped over the {0}".format(animal,item))
+#print("The {} jumped over the {}".format(animal="dog",item="fence"))
+#print("The {animal} jumped over the {item}".format(animal="dog",item="fence"))
+#print("The {animal} jumped over the {animal}".format(animal="dog",item="fence"))
+
+text = "The {} jumped over the {}"            # Cleaner way of doing a str format
+print(text.format(animal,item))
+
 """
 
 
 
 ##
-### ********************************* 26    
+### ********************************* 25.1       Format fields  str.format
 ##
 
+"""
+name = "leandro"
 
-
-
-
-
-
-##
-### ********************************* 25    
-##
-
-
-
-##
-### ********************************* 26    
-##
-
-##
-### ********************************* 25    
-##
+print("Hello, my name is {:10}. Nice to mmet you".format(name))                #This will make 10 spaces bettween name and Nice to..
+print("Hello, my name is {:<10}. Nice to mmet you".format(name))                # same as above (defalut)
+print("Hello, my name is {:>10}. Nice to mmet you".format(name))                # 10 spaces before bro
+print("Hello, my name is {:^10}. Nice to mmet you".format(name))                #This will make 1name in middle of 10 spaces
+"""
 
 
 
 ##
-### ********************************* 26    
+### ********************************* 25.2        Format fields  str.format
+##
+
+"""
+number = 3.14159
+number2 = 1000
+print("The number Pi is {:.2f}".format(number))     # This will print pi with only 2 floating numbers  (3.14) and also rounds if needed
+
+print("The number is {:,}".format(number2))     # This will print 1000 has 1,000
+
+print("The number is {:b}".format(number2))     # This will print a represantation of the number in binary
+
+print("The number is {:x}".format(number2))     # This will print as hexadecimal
+
+print("The number is {:E}".format(number2))     # This will print as cientific notation  Exemp 1.00000E +03
+print("The number is {:e}".format(number2))     
+"""
+
+##
+### ********************************* 26    Generate random numbers    ####2.34h
+##
+
+import random  #module random
+
+
+
+##
+### ********************************* 27    
+##
+
+
+
+##
+### ********************************* 28    
 ##
 
 ##
-### ********************************* 25    
+### ********************************* 29    
 ##
 
 
 
 ##
-### ********************************* 26    
+### ********************************* 30    
 ##
 
 ##
