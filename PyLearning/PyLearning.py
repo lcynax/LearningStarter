@@ -608,24 +608,49 @@ finally:                                  # Always executes, with or without exc
 ### ********************************* 28     File detection  - basic
 ##
 
+"""
+import os     #already in python library
+
+path = "C:\\Users\\leand\\Downloads\\testepython.txt"   # Double \  
+
+if os.path.exists(path):                             # if location exists
+    print("File exists!")
+    if os.path.isfile(path):                         # if is file
+        print("Thats a file")
+    elif os.path.isdir(path):                     # If Direcory (paste) exists
+        print("That is a directory") 
+else:
+    print("Does not exist!")
+"""
 
 
+##
+### ********************************* 29       Read File Contents
+##
 
 
+# with open("testepython") as file: if is already in project
 
+try:
 
+    with open("C:\\Users\\leand\\Downloads\\testepython.txt") as file:                # Should always use the try function to prevent errors
+        print(file.read())
+        
+#print(file.closed)                          # automatically closes the file with the "with open" function , the print can confirm the state of the file
+except FileNotFoundError:
+    print("That file was not found. ")
 
 
 
 ##
-### ********************************* 29    
+### ********************************* 30     Writing  text files
 ##
 
 
 
-##
-### ********************************* 30    
-##
+
+
+
 
 ##
 ### ********************************* 31    
