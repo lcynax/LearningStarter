@@ -563,15 +563,46 @@ print("The number is {:e}".format(number2))
 ### ********************************* 26    Generate random numbers    ####2.34h
 ##
 
+"""
 import random  #module random
+x = random.randint(1,6) # between 1 and 6
+y = random.random()     # between 0 and 1
 
+myList = ["rock" , "paper" , "scissors"]
+z = random.choice(myList)                     # random
 
+cards = [1,2,3,4,5,6,7,8,9,"J","Q","K","A"]   #random order
+random.shuffle(cards)
+
+print(x)
+print(z)
+print(cards)
+"""
 
 ##
-### ********************************* 27    
+### ********************************* 27      Exception      -.---- event detected during the execution of the code that interrupts the flow of the program
 ##
 
+"""
+try:
+    numerator = int(input.("Enter a number to divide: "))
+    denominator = int(input.("Enter a number to divide by: "))
+    result = numerator / denominator
+    print(result)
+except ZeroDivisionError:
+    print("You can´t divide by zero!")    # Writing number "0"
+except ValueError:                    
+    print("Enter only numbers")           # Writing something that ain´t numbers
+except Exception:
+    print("Something went wrong")         # Global exception
+else:
+    print(result)                         # if there is no exception
 
+finally:                                  # Always executes, with or without exception
+    print("End")
+
+#except Exception as e:  /  except ValueError as e:  /   except ZeroDivisionError as e:     WAY of showing with a print(e) what was the problem
+"""
 
 ##
 ### ********************************* 28    
