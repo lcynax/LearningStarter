@@ -628,7 +628,7 @@ else:
 ### ********************************* 29       Read File Contents
 ##
 
-
+"""
 # with open("testepython") as file: if is already in project
 
 try:
@@ -639,22 +639,34 @@ try:
 #print(file.closed)                          # automatically closes the file with the "with open" function , the print can confirm the state of the file
 except FileNotFoundError:
     print("That file was not found. ")
-
-
-
-##
-### ********************************* 30     Writing  text files
-##
-
-
-
-
-
+"""
 
 
 ##
-### ********************************* 31    
+### ********************************* 30     Writing  text files             2h:53min
 ##
+
+"""
+text = "Have a good one \n New line command \n New line command "
+text1 = "Just writing a new line"
+
+with open("test.txt","w") as file:        # W stands for write (default is "r" - read)
+    file.write(text)
+    print("Done")
+
+with open("test.txt","a") as file:
+    file.write(text1)
+"""
+
+##
+### ********************************* 31    Copying some files content
+##
+
+
+
+
+
+
 
 
 
