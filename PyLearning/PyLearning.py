@@ -662,25 +662,83 @@ with open("test.txt","a") as file:
 ### ********************************* 31    Copying some files content
 ##
 
+"""
+#copyfile() = copies content of file
+#copy() = copyfile() + permission mode + destination can be a directory
+#copy2() = copy() + copies metadata (file´s creation and modification times)
 
+import shutil
 
-
-
-
-
+shutil.copyfile('test.txt','copy.txt')     # Creates a new copied file inside visual studio project
+shutil.copyfile('test.txt','C:\\Users\\leand\\Downloads\\copy.txt')    # creates a new copied file in windows path
+"""
 
 
 ##
-### ********************************* 32   
+### ********************************* 32     Moving Files or folders in pc
 ##
 
-##
-### ********************************* 33   
+
+"""
+import os
+
+source = "test.txt"
+destination = "C:\\Users\\leand\\Downloads\\test.txt"
+
+try:
+    if os.path.exists(destination):
+        print("There is already a file there")
+    else:
+        os.replace(source, destination)
+        print(source+ " was moved.")
+except FileNotFoundError:
+    print(source+" was not found. ")
+"""
+
+
+## 
+### ********************************* 33     Deleting files with Python
 ##
 
+
+"""
+import os
+import shutil                   # needed to remove a directory that contains files
+
+#path = "test.txt"
+path = "empty_folder"
+
+try:
+    os.remove(path)             # This function does not remove empty Folders
+    os.rmdir(path)              # How to remove folders
+    #shutil.rmtree(path):       # dangerous function, because it removes the directory and all files within
+
+except FileNotFoundError:
+    print("That file was not found")
+
+except PermissionError:         # Might happen trying to remove a directory with the os.remove function
+    print("You do not have permission do delete that.")
+
+except OSError:                 # cwhen trying to delete a folder that has content,,,, the OSError shows up
+    print("You cannot delete that using that function")
+
+else:                           # If there is no exceptions
+    print(path+ " was deleted.")
+"""
+
+
 ##
-### ********************************* 34   
-##
+### ********************************* 34    Modules   = a file containing python code. May contain functions, classes, etc.
+##                                                      used with modular programming, which is to separate a program into parts.
+
+import NewFile
+
+NewFile.hello()
+
+
+
+
+
 
 ##
 ### ********************************* 35   

@@ -1,0 +1,6 @@
+
+def hello():
+	print("New file is reachable.")
+
+def hello2():
+	print("New file is reachable 2.")
