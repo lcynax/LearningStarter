@@ -731,22 +731,97 @@ else:                           # If there is no exceptions
 ### ********************************* 34    Modules   = a file containing python code. May contain functions, classes, etc.
 ##                                                      used with modular programming, which is to separate a program into parts.
 
-import NewFile
+#  Nota: So funcionar depois de encontrar Python na Cmd, pip3 instalado, e modificar o tipo de file do module do projeto para messages.py
 
-NewFile.hello()
-
-
+#help("modules")   to help , also on web
 
 
+"""
+#import messages
+#import messages as msg
+from messages import hello,helloo
+#from messages import *                   '''''' Imports all
+
+#messages.helloo()
+#msg.helloo()
+helloo()
+"""
+   
+## 
+### ********************************* 35     Rock Paper scissors game
+##
+
+"""
+import random
+
+
+while True: 
+    choices = ["rock", "paper" , "scissors"]
+
+    computer = random.choice(choices)
+    player = None
+
+    while player not in choices:
+        player = input("Rock, paper or scissors? : ").lower()
+
+    if player == computer:
+        print("Computer: ",computer)
+        print("Player: ",player)
+
+    elif player == "rock":
+        if computer == "paper":
+            print("Computer: ",computer)
+            print("Player: ",player)
+            print("U lose! ")
+
+        if computer == "scissors":
+            print("Computer: ",computer)
+            print("Player: ",player)
+            print("U Win! ")
+
+    elif player == "scissors":
+        if computer == "rock":
+            print("Computer: ",computer)
+            print("Player: ",player)
+            print("U lose! ")
+
+        if computer == "paper":
+            print("Computer: ",computer)
+            print("Player: ",player)
+            print("U Win! ")
+
+    elif player == "paper":
+        if computer == "scissors":
+            print("Computer: ",computer)
+            print("Player: ",player)
+            print("U lose! ")
+
+        if computer == "rock":
+            print("Computer: ",computer)
+            print("Player: ",player)
+            print("U Win! ")
+
+    play_again = input("Play again? ( yes/no): ").lower()
+
+
+    if play_again != "yes":
+        break
+print("Bye!!!")
+"""
 
 
 ##
-### ********************************* 35   
+### ********************************* 36      Basic Quiz game
 ##
 
-##
-### ********************************* 36   
-##
+
+
+
+
+
+
+
+
 
 ##
 ### ********************************* 37   
